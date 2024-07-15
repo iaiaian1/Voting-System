@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-14 14:02:50.787765",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_q3cy",
+  "amended_from",
+  "naming_series",
+  "voter",
+  "candidate",
+  "position"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_q3cy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ballot",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "BALLOT-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "label": "Naming Series",
+   "read_only": 1
+  },
+  {
+   "fieldname": "voter",
+   "fieldtype": "Link",
+   "label": "Voter",
+   "options": "Voters"
+  },
+  {
+   "fieldname": "candidate",
+   "fieldtype": "Link",
+   "label": "Candidate",
+   "options": "Candidates"
+  },
+  {
+   "fetch_from": "candidate.position",
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-14 14:08:54.230139",
+ "modified_by": "Administrator",
+ "module": "Voting System",
+ "name": "Ballot",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
